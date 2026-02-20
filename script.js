@@ -220,11 +220,13 @@
         autore: "pippo1",
         pagine: 101
     }
+
     let libro2 = {
         titolo: "Titolo2",
         autore: "pippo2",
         pagine: 102
     }
+
     let libro3 = {
         titolo: "Titolo3",
         autore: "pippo3",
@@ -236,6 +238,28 @@
     console.table(tuttiLibri)
 
     console.log(libro2.titolo)
+
+    //class Libro{
+    //    constructor(titolo, autore, pagine){
+    //        this.titolo = titolo;
+    //        this.autore = autore;
+    //        this.pagine = pagine;
+    //    }
+    //}
+
+    //let libro1 = new Libro ("Libro1", "Autore1", 100)
+
+    //let libro2 = new Libro ("Libro2", "Autore2", 200)
+
+    //let libro3 = new Libro ("Libro3", "Autore3", 300)
+
+    //let tuttiLibri = [libro1, libro2, libro3]
+
+    //console.table(tuttiLibri)
+
+
+
+
 
 // ==================
 // ESERCIZIO 15: FUNZIONE CHE RESTITUISCE OGGETTO
