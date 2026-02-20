@@ -268,6 +268,17 @@
 // La funzione deve restituire un oggetto con le proprietà nome ed età
 // Chiama la funzione e salva il risultato in una variabile
 // Stampa l'oggetto creato
+    function creaPersona(nome, eta){
+        return {
+            nome: nome,
+            eta: eta
+        }
+    }
+
+    let personaCreata = creaPersona("Mario", 30)
+
+    console.log(personaCreata)
+
 
 
 // ==================
@@ -278,7 +289,21 @@
 // - metodo "aggiungiStudente" che prende un nome e lo aggiunge all'array
 // - metodo "contaStudenti" che restituisce il numero di studenti
 // Aggiungi alcuni studenti e stampa il conteggio
+    let classe = {
+        studente: studenti = ["Luca", "Angelo", "Daniele"],
+        aggiungiStudente(){
+            studenti.push("Elena", "Kevin", "Michele")
+        },
+        contaStudenti(){
+            console.log("il numero degli studenti è: " + studenti.length)
+        }
+    }
 
+    classe.aggiungiStudente()
+
+    let conteggio = classe.contaStudenti()
+
+    
 
 // ==================
 // ESERCIZIO 17: OGGETTO CON PIÙ METODI
