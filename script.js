@@ -301,9 +301,7 @@
 
     classe.aggiungiStudente()
 
-    let conteggio = classe.contaStudenti()
-
-    
+    classe.contaStudenti()
 
 // ==================
 // ESERCIZIO 17: OGGETTO CON PIÙ METODI
@@ -314,3 +312,19 @@
 // - metodo "preleva" che prende un importo e lo sottrae dal saldo
 // - metodo "mostraSaldo" che stampa il saldo attuale
 // Fai alcune operazioni e mostra il saldo finale
+    let contoBancario = {
+        saldo: saldo = 1000,
+        deposita(importo1){
+            totale = saldo + importo1 //creo una variabile totale per riutilizzarla nel calcolo successivo
+        },
+        preleva(importo2){
+            nuovoTotale = totale - importo2 //nuovoTotale è una nuova variabile per utilizzarla dopo nel mostraSaldo
+        },
+        mostraSaldo(){
+            console.log(nuovoTotale)
+        }
+    }
+
+    contoBancario.deposita(1500)
+    contoBancario.preleva(500)
+    contoBancario.mostraSaldo()
