@@ -82,6 +82,14 @@
 // Crea un array "animali" con almeno 5 animali
 // Usa slice() per creare un nuovo array con solo i primi 3 animali
 // Stampa entrambi gli array (l'originale e quello nuovo)
+    let animali = ["Leone", "Zebra", "Tigre", "Ermellino", "Fenicottero"]
+    
+    console.log(animali);
+
+    let nuovoAnimali = animali.slice(0, 3)//slice funziona così: indichi 2 posizioni, il primo indice viene incluso, l'ultimo indica il momento prima che si deve fermare
+
+    console.log(nuovoAnimali);
+    
 
 
 // ==================
@@ -90,7 +98,10 @@
 // Crea un array "parole" con le parole ["JavaScript", "è", "fantastico"]
 // Usa join() con uno spazio come separatore per creare una frase
 // Stampa la frase risultante
+    let parole = ["JavaScript", "è", "fantastico", ":KSTM!"]
 
+    console.log(parole.join(" "));
+    
 
 // ==================
 // ESERCIZIO 8: ARRAY - CONCAT
@@ -98,7 +109,11 @@
 // Crea due array: "frutta1" con ["mela", "pera"] e "frutta2" con ["banana", "arancia"]
 // Usa concat() per unire i due array in un nuovo array "tuttaLaFrutta"
 // Stampa il risultato
+    let frutta1 = ["mela", "pera"];
+    let frutta2 = ["banana", "arancia"]
+    let frutta = frutta1.concat(frutta2);
 
+    console.log(frutta);
 
 // ==================
 // ESERCIZIO 9: ARRAY - INCLUDES
@@ -108,6 +123,12 @@
 // Usa includes() per verificare se "Parigi" è nell'array
 // Stampa i risultati (true/false)
 
+    let citta = ["Chivasso", "Pineto", "Bereguardo", "Bassano del Grappa", "Roma"];
+
+    console.log(citta.includes("Roma"))
+    console.log(citta.includes("Parigi"))
+
+
 
 // ==================
 // ESERCIZIO 10: ARRAY - INDEXOF
@@ -116,7 +137,10 @@
 // Usa indexOf() per trovare la posizione di "c"
 // Usa indexOf() per cercare "z" (che non c'è)
 // Stampa i risultati
+    let lettere = ["a", "b", "c", "d", "e"];
 
+    console.log(lettere.indexOf("c"));
+    console.log(lettere.indexOf("z"));
 
 // ==================
 // ESERCIZIO 11: OGGETTO SEMPLICE
@@ -127,7 +151,16 @@
 // - citta: la tua città
 // Stampa l'intero oggetto
 // Stampa solo la proprietà "nome" usando la dot notation
+    let persona = {
+        nome: "Daniele",
+        eta: 37,
+        citta: "Chivasso"
+    }
 
+    console.log(persona);
+    console.log(persona.nome);
+
+    
 
 // ==================
 // ESERCIZIO 12: OGGETTO CON METODO
@@ -136,7 +169,15 @@
 // - una proprietà "marca" (es: "Casio")
 // - un metodo "somma" che prende due parametri e restituisce la loro somma
 // Chiama il metodo somma e stampa il risultato
-
+    let calcolatrice = {
+        marca: "Casio",
+        somma: function(a, b) {
+            console.log(a + b)
+        }
+    }
+    
+    calcolatrice.somma(4, 10)
+    
 
 // ==================
 // ESERCIZIO 13: OGGETTO CON THIS
@@ -145,6 +186,24 @@
 // - proprietà: nome, voto
 // - metodo "stampaInfo" che usa "this" per stampare "Nome: [nome], Voto: [voto]"
 // Chiama il metodo stampaInfo
+    class Studente{
+        constructor(nome, voto){
+            this.nome = nome;
+            this.voto = voto;
+        }
+
+        stampaInfo(){
+            console.log("Nome: " + this.nome, "Voto: " + this.voto)
+        }
+    }    
+
+    let angelo = new Studente("Angelo", 5)
+    let luca = new Studente("Luca", 10)
+    let daniele = new Studente("Daniele", 30)
+
+
+    console.table([angelo, luca, daniele])
+    console.log(angelo, luca, daniele)
 
 
 // ==================
@@ -156,7 +215,27 @@
 // - pagine (numero)
 // Stampa l'intero array
 // Stampa solo il titolo del secondo libro
+    let libro1 = {
+        titolo: "Titolo1",
+        autore: "pippo1",
+        pagine: 101
+    }
+    let libro2 = {
+        titolo: "Titolo2",
+        autore: "pippo2",
+        pagine: 102
+    }
+    let libro3 = {
+        titolo: "Titolo3",
+        autore: "pippo3",
+        pagine: 103
+    }
 
+    let tuttiLibri = [libro1, libro2, libro3]
+
+    console.table(tuttiLibri)
+
+    console.log(libro2.titolo)
 
 // ==================
 // ESERCIZIO 15: FUNZIONE CHE RESTITUISCE OGGETTO
